@@ -1,0 +1,16 @@
+galaxy_info:
+  author: Phil Porada
+  description: Installs and configures a specific MongoDB system repository
+  company: Eat the rich
+  license: AAL
+  min_ansible_version: 2.1.1.0
+  platforms:
+    - name: EL
+      versions:
+        - 7
+  galaxy_tags:
+    - mongod
+    - mongodb
+    - nosql
+
+dependencies: []

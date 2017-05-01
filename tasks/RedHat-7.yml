@@ -8,9 +8,9 @@
     mode: 0644
   when: mongodb_version == "2.x"
 
-- name: Copy the 3.x repository into place
-  copy:
-    src: mongodb-3.x.repo
+- name: Copy the {{ mongodb_version }} repository into place
+  template:
+    src: etc/yum.repos.d/mongodb-3.x.repo.j2
     dest: /etc/yum.repos.d/mongodb-3.x.repo
     owner: root
     group: root

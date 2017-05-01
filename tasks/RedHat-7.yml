@@ -1,7 +1,4 @@
 ---
-- name: Include OS-specific variables (RHEL)
-  include_vars: "{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
-
 - name: Copy the 2.x repository into place
   copy:
     src: mongodb-2.x.repo
@@ -18,4 +15,5 @@
     owner: root
     group: root
     mode: 0644
-  when: mongodb_vesion == "3.x"
+  when: mongodb_vesion != "2.x"
+...

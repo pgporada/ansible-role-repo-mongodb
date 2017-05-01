@@ -1,4 +1,5 @@
---- 
+---
 - name: RedHat 7 based distributions
   include: "{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
   when: ansible_os_family == "RedHat" and ansible_distribution_major_version == "7"
+...

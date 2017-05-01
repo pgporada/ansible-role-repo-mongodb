@@ -6,7 +6,7 @@
     owner: root
     group: root
     mode: 0644
-  when: mongodb_vesion == "2.x"
+  when: mongodb_version == "2.x"
 
 - name: Copy the 3.x repository into place
   copy:
@@ -15,5 +15,5 @@
     owner: root
     group: root
     mode: 0644
-  when: mongodb_vesion != "2.x"
+  when: mongodb_version != "2.x"
 ...
